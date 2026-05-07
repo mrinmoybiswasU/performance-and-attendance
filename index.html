@@ -156,21 +156,7 @@ td.fine-green{color:var(--green)}
 .cap-tag{font-size:.65rem;background:var(--amber-bg);border:1px solid var(--amber-border);color:var(--amber);padding:1px 6px;border-radius:3px;font-family:'Inter',sans-serif;font-weight:500;margin-left:6px}
 .no-waiver{color:var(--text3);font-size:.78rem;font-style:italic;font-family:'Inter',sans-serif}
 
-/* ── HELP PANEL ── */
-.help-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)}
-.help-card-header{background:var(--navy);color:#fff;padding:14px 16px;font-size:.82rem;font-weight:600}
-.help-person{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--border)}
-.help-person:last-child{border-bottom:none}
-.person-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:#fff;flex-shrink:0}
-.person-info .name{font-size:.82rem;font-weight:600;color:var(--text)}
-.person-info .role{font-size:.72rem;color:var(--text3)}
-.person-info .desc{font-size:.73rem;color:var(--text2);margin-top:1px}
-.contact-btn{margin-left:auto;font-size:.72rem;padding:4px 10px;height:auto;background:var(--surface2);border:1px solid var(--border);border-radius:5px;cursor:pointer;color:var(--text2);font-weight:500}
-.contact-btn:hover{background:var(--surface3)}
-
-/* ── SIDEBAR RIGHT LAYOUT ── */
-.content-with-sidebar{display:grid;grid-template-columns:1fr 220px;gap:20px;align-items:start}
-@media(max-width:800px){.content-with-sidebar{grid-template-columns:1fr}.sidebar{display:none}.layout{flex-direction:column}}
+@media(max-width:800px){.sidebar{display:none}.layout{flex-direction:column}}
 
 /* ── SPINNER ── */
 .spinner-wrap{text-align:center;padding:48px 0}
@@ -383,7 +369,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);font-size:.73rem;text-
                 <div>
                   <div style="font-size:.88rem;font-weight:600;color:var(--text);margin-bottom:4px">Keep a screenshot of your payment confirmation</div>
                   <div style="background:var(--red-bg);border:1px solid var(--red-border);border-left:3px solid var(--red);border-radius:var(--radius);padding:12px 16px;font-size:.82rem;color:#b91c1c;line-height:1.7">
-                    📸 <strong>Take a screenshot</strong> of the bKash payment confirmation screen immediately after payment. This screenshot must be submitted to the department as proof of payment. <strong>Payments without a confirmation screenshot will not be accepted.</strong>
+                    📸 <strong>Take a screenshot</strong> of the bKash payment confirmation screen immediately after payment. This screenshot might have to be submitted to the department as proof of payment later.</strong>
                   </div>
                 </div>
               </div>
@@ -391,85 +377,25 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);font-size:.73rem;text-
             </div>
 
             <!-- Right: QR -->
-            <div style="text-align:center">
-              <div style="background:#fff;border:2px dashed #f48fb1;border-radius:var(--radius-lg);padding:16px;margin-bottom:10px">
-                <!-- PLACEHOLDER QR — replace the image src below with your actual bKash merchant QR -->
-                <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto">
-                  <rect width="160" height="160" fill="#fff"/>
-                  <!-- Quiet zone + border -->
-                  <rect x="8" y="8" width="144" height="144" fill="none" stroke="#e2136e" stroke-width="2" rx="4"/>
-                  <!-- Top-left finder -->
-                  <rect x="16" y="16" width="42" height="42" rx="3" fill="#e2136e"/>
-                  <rect x="22" y="22" width="30" height="30" rx="2" fill="#fff"/>
-                  <rect x="28" y="28" width="18" height="18" rx="1" fill="#e2136e"/>
-                  <!-- Top-right finder -->
-                  <rect x="102" y="16" width="42" height="42" rx="3" fill="#e2136e"/>
-                  <rect x="108" y="22" width="30" height="30" rx="2" fill="#fff"/>
-                  <rect x="114" y="28" width="18" height="18" rx="1" fill="#e2136e"/>
-                  <!-- Bottom-left finder -->
-                  <rect x="16" y="102" width="42" height="42" rx="3" fill="#e2136e"/>
-                  <rect x="22" y="108" width="30" height="30" rx="2" fill="#fff"/>
-                  <rect x="28" y="114" width="18" height="18" rx="1" fill="#e2136e"/>
-                  <!-- Timing pattern -->
-                  <rect x="62" y="16" width="6" height="6" fill="#e2136e"/>
-                  <rect x="74" y="16" width="6" height="6" fill="#e2136e"/>
-                  <rect x="86" y="16" width="6" height="6" fill="#e2136e"/>
-                  <rect x="16" y="62" width="6" height="6" fill="#e2136e"/>
-                  <rect x="16" y="74" width="6" height="6" fill="#e2136e"/>
-                  <rect x="16" y="86" width="6" height="6" fill="#e2136e"/>
-                  <!-- Data modules (decorative) -->
-                  <rect x="62" y="62" width="36" height="36" rx="2" fill="#e2136e" opacity=".12"/>
-                  <rect x="68" y="68" width="24" height="24" rx="1" fill="#e2136e" opacity=".2"/>
-                  <!-- Scattered data bits -->
-                  <rect x="62" y="62" width="6" height="6" fill="#e2136e"/>
-                  <rect x="74" y="62" width="6" height="6" fill="#e2136e"/>
-                  <rect x="86" y="62" width="6" height="6" fill="#e2136e"/>
-                  <rect x="62" y="74" width="6" height="6" fill="#e2136e"/>
-                  <rect x="80" y="74" width="6" height="6" fill="#e2136e"/>
-                  <rect x="86" y="80" width="6" height="6" fill="#e2136e"/>
-                  <rect x="62" y="86" width="6" height="6" fill="#e2136e"/>
-                  <rect x="74" y="86" width="6" height="6" fill="#e2136e"/>
-                  <rect x="92" y="86" width="6" height="6" fill="#e2136e"/>
-                  <rect x="102" y="62" width="6" height="6" fill="#e2136e"/>
-                  <rect x="114" y="62" width="6" height="6" fill="#e2136e"/>
-                  <rect x="126" y="62" width="6" height="6" fill="#e2136e"/>
-                  <rect x="138" y="68" width="6" height="6" fill="#e2136e"/>
-                  <rect x="102" y="74" width="6" height="6" fill="#e2136e"/>
-                  <rect x="120" y="74" width="6" height="6" fill="#e2136e"/>
-                  <rect x="132" y="74" width="6" height="6" fill="#e2136e"/>
-                  <rect x="108" y="80" width="6" height="6" fill="#e2136e"/>
-                  <rect x="126" y="80" width="6" height="6" fill="#e2136e"/>
-                  <rect x="62" y="102" width="6" height="6" fill="#e2136e"/>
-                  <rect x="74" y="102" width="6" height="6" fill="#e2136e"/>
-                  <rect x="92" y="102" width="6" height="6" fill="#e2136e"/>
-                  <rect x="108" y="102" width="6" height="6" fill="#e2136e"/>
-                  <rect x="120" y="108" width="6" height="6" fill="#e2136e"/>
-                  <rect x="62" y="114" width="6" height="6" fill="#e2136e"/>
-                  <rect x="80" y="114" width="6" height="6" fill="#e2136e"/>
-                  <rect x="92" y="114" width="6" height="6" fill="#e2136e"/>
-                  <rect x="114" y="114" width="6" height="6" fill="#e2136e"/>
-                  <rect x="132" y="114" width="6" height="6" fill="#e2136e"/>
-                  <rect x="62" y="126" width="6" height="6" fill="#e2136e"/>
-                  <rect x="74" y="126" width="6" height="6" fill="#e2136e"/>
-                  <rect x="86" y="126" width="6" height="6" fill="#e2136e"/>
-                  <rect x="102" y="126" width="6" height="6" fill="#e2136e"/>
-                  <rect x="120" y="126" width="6" height="6" fill="#e2136e"/>
-                  <rect x="138" y="126" width="6" height="6" fill="#e2136e"/>
-                  <rect x="62" y="138" width="6" height="6" fill="#e2136e"/>
-                  <rect x="80" y="138" width="6" height="6" fill="#e2136e"/>
-                  <rect x="108" y="138" width="6" height="6" fill="#e2136e"/>
-                  <rect x="126" y="138" width="6" height="6" fill="#e2136e"/>
-                  <!-- bKash logo center -->
-                  <circle cx="80" cy="80" r="10" fill="#fff" stroke="#e2136e" stroke-width="1.5"/>
-                  <text x="80" y="84" text-anchor="middle" font-size="8" font-weight="700" fill="#e2136e" font-family="Arial">bK</text>
-                </svg>
-                <div style="font-size:.68rem;color:#ad1457;margin-top:8px;font-weight:600;text-transform:uppercase;letter-spacing:.06em">Scan to Pay</div>
-                <div style="font-size:.65rem;color:var(--text3);margin-top:2px">Replace with actual QR</div>
+              <div style="background:#fff;border:2px dashed #f48fb1;border-radius:var(--radius-lg);padding:16px;margin-bottom:10px;">
+
+                <!-- QR IMAGE -->
+                <img src="bkash_qr.jpeg"
+                    style="width:100%; max-width:180px; height:auto; display:block; margin:0 auto; object-fit:contain;">
+
+                <div style="font-size:.68rem;color:#ad1457;margin-top:8px;font-weight:600;text-transform:uppercase;letter-spacing:.06em">
+                  Scan to Pay
+                </div>
+
+                <div style="font-size:.65rem;color:var(--text3);margin-top:2px">
+                  Replace with actual QR
+                </div>
+
               </div>
-              <div style="font-size:.72rem;color:var(--text3);line-height:1.6;text-align:left;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:10px 12px">
+              <!-- <div style="font-size:.72rem;color:var(--text3);line-height:1.6;text-align:left;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:10px 12px">
                 <strong style="color:var(--text2);display:block;margin-bottom:4px">How to replace the QR:</strong>
                 In <code style="font-size:.7rem;background:var(--border);padding:1px 4px;border-radius:3px">index.html</code>, find the <code style="font-size:.7rem;background:var(--border);padding:1px 4px;border-radius:3px">&lt;!-- PLACEHOLDER QR</code> comment and replace the entire <code style="font-size:.7rem;background:var(--border);padding:1px 4px;border-radius:3px">&lt;svg&gt;</code> block with an <code style="font-size:.7rem;background:var(--border);padding:1px 4px;border-radius:3px">&lt;img src="qr.png"&gt;</code>.
-              </div>
+              </div> -->
             </div>
 
           </div>
@@ -484,7 +410,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);font-size:.73rem;text-
           <div style="font-size:.82rem;color:rgba(255,255,255,.7);line-height:1.9">
             ✅ &nbsp;Screenshot saved showing Transaction ID, amount, and date<br>
             ✅ &nbsp;Reference field shows <span style="font-family:'IBM Plex Mono',monospace;color:#93c5fd">AFS26-YourStudentID</span><br>
-            ✅ &nbsp;Submit screenshot to the CSE Department office or as instructed<br>
+            ✅ &nbsp;Save screenshot if required for submission to the CSE Department office or as instructed<br>
             ✅ &nbsp;Keep a copy until your payment is fully verified
           </div>
         </div>
@@ -596,9 +522,7 @@ function renderResult(sid, s) {
 
     ${uaBanner}
 
-    <div class="content-with-sidebar">
-      <div>
-        <div class="section-card" style="animation:fadeIn .35s ease">
+    <div class="section-card" style="animation:fadeIn .35s ease">
           <div class="section-card-header">
             <div class="section-card-title"><span class="dot"></span>Course-wise Fine Breakdown</div>
             <span style="font-size:.72rem;color:var(--text3)">${s.courses.length} course(s)</span>
@@ -633,31 +557,6 @@ function renderResult(sid, s) {
             </div>
           </div>
         </div>
-      </div>
-
-      <div>
-        <div class="help-card">
-          <div class="help-card-header">Need help?</div>
-          <div class="help-person">
-            <div class="person-avatar" style="background:#2563eb">JS</div>
-            <div class="person-info">
-              <div class="name">Account Manager</div>
-              <div class="role">Finance Office</div>
-              <div class="desc">To coordinate your payment</div>
-            </div>
-            <button class="contact-btn">Contact</button>
-          </div>
-          <div class="help-person">
-            <div class="person-avatar" style="background:#7c3aed">AB</div>
-            <div class="person-info">
-              <div class="name">CSE Coordinator</div>
-              <div class="role">Academic Office</div>
-              <div class="desc">For waiver &amp; admit queries</div>
-            </div>
-            <button class="contact-btn">Contact</button>
-          </div>
-        </div>
-      </div>
     </div>`;
 }
 
