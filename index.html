@@ -253,7 +253,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);font-size:.73rem;text-
           <div class="input-group">
             <div class="input-wrap">
               <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-              <input id="sid-input" type="text" placeholder="Enter Your Full ID (e.g. 0432220005101002)" autocomplete="off" spellcheck="false" />
+              <input id="sid-input" type="text" placeholder="Enter your Student ID (e.g. 432220005101002)" autocomplete="off" spellcheck="false" />
             </div>
             <button class="btn btn-primary" onclick="lookup()">
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
@@ -388,6 +388,10 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);font-size:.73rem;text-
                   Scan to Pay
                 </div>
 
+                <div style="font-size:.65rem;color:var(--text3);margin-top:2px">
+                  Replace with actual QR
+                </div>
+
               </div>
               <!-- <div style="font-size:.72rem;color:var(--text3);line-height:1.6;text-align:left;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:10px 12px">
                 <strong style="color:var(--text2);display:block;margin-bottom:4px">How to replace the QR:</strong>
@@ -400,16 +404,16 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);font-size:.73rem;text-
       </div>
 
       <!-- Submission reminder -->
-      <div style="background:var(--navy);border-radius:var(--radius-lg);padding:20px 24px;display:flex;gap:16px;align-items:flex-start">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 24px;display:flex;gap:16px;align-items:flex-start;box-shadow:var(--shadow)">
         <div style="font-size:1.4rem;flex-shrink:0">📋</div>
         <div>
-          <div style="font-size:.88rem;font-weight:600;color:#fff;margin-bottom:6px">After Payment — Submission Checklist</div>
-          <div style="font-size:.82rem;color:rgba(255,255,255,.7);line-height:1.9">
+          <div style="font-size:.88rem;font-weight:600;color:var(--text);margin-bottom:6px">After Payment — Submission Checklist</div>
+          <div style="font-size:.82rem;color:var(--text2);line-height:1.9">
             ✅ &nbsp;Screenshot saved showing Transaction ID, amount, and date<br>
-            ✅ &nbsp;Reference field shows <span style="font-family:'IBM Plex Mono',monospace;color:#93c5fd">AFS26-YourStudentID</span><br>
+            ✅ &nbsp;Reference field shows <span style="font-family:'IBM Plex Mono',monospace;color:var(--accent);font-weight:600">AFS26-YourStudentID</span><br>
             ✅ &nbsp;Save screenshot if required for submission to the CSE Department office or as instructed<br>
             ✅ &nbsp;Keep a copy until your payment is fully verified<br>
-            ✅ &nbsp;Fill in the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKVn5aLcFDVdAlieDRXZ7GpFQALUsEqIecPVwx3jEP01aimA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" style="color:#93c5fd;font-weight:600;text-decoration:underline">Low Attendance Fine Confirmation Form for Spring 2026</a> with your name, ID, bKash number, fine amount, and Transaction ID
+            ✅ &nbsp;Fill in the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKVn5aLcFDVdAlieDRXZ7GpFQALUsEqIecPVwx3jEP01aimA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" style="color:var(--accent);font-weight:600;text-decoration:underline">Low Attendance Fine Confirmation Form for Spring 2026</a> with your name, ID, bKash number, fine amount, and Transaction ID
           </div>
         </div>
       </div>
@@ -537,11 +541,7 @@ function renderResult(sid, s) {
               <tbody>${rows}</tbody>
             </table>
           </div>
-          <div class="totals-grid">
-            <div class="total-cell">
-              <span class="total-label">Subtotal</span>
-              <span class="total-value ${rawTotal > 0 ? 'red' : 'green'}">৳ ${rawTotal.toLocaleString()} ${capTag}</span>
-            </div>
+          <div class="totals-grid" style="grid-template-columns:1fr 1fr">
             <div class="total-cell waiver-cell">
               <span class="total-label" style="display:flex;align-items:center;gap:6px">
                 <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 0 1 0 8h-1"/></svg>
